@@ -2,7 +2,7 @@
 order: 0
 title: 指南
 description: ''
-keywords: [紫竹翻译计划]
+keywords: [紫竹光点计划]
 nav:
   title: 指南
   order: 1
