@@ -18,12 +18,12 @@ export default defineConfig({
     '@c-primary': '<%= theme %>',
   },
   publicPath: '/',
-  analytics: {
+  // analytics: {
     // ga_v2: '',
-  },
-  sitemap: {
+  // },
+  // sitemap: {
     // hostname: 'https://<%= name %>.js.org',
-  },
+  // },
   hash: true,
   exportStatic: {},
   ...(process.env.NODE_ENV === 'development' ? {} : { ssr: {} }),
