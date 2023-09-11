@@ -7,6 +7,7 @@ export default defineConfig({
     name: '<%= title %>',
     logo: '<%= logo %>',
     prefersColor: { default: 'auto' },
+    editLink: "https://github.com/zizhuspot/<%= name %>.js.org/edit/main/{filename}",
     socialLinks: {
       github: 'https://github.com/zizhuspot/<%= name %>',
       twitter: 'https://twitter.com/luozhu2021'
