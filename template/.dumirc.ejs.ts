@@ -33,14 +33,11 @@ export default defineConfig({
     process.env.NODE_ENV !== 'development'
       ? [{ src: '/adsbygoogle.js', async: true, crossorigin: 'anonymous' }]
       : [],
-  scripts:
-    process.env.NODE_ENV !== 'development'
-      ? [
-          {
-            async: true,
-            src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
-            crossorigin: 'anonymous',
-          },
-        ]
-      : [],
+  scripts: [
+    {
+      async: true,
+      src: 'https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js',
+      crossorigin: 'anonymous',
+    },
+  ],
 });
