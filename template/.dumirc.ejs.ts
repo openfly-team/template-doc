@@ -7,23 +7,24 @@ export default defineConfig({
     name: '<%= title %>',
     logo: '<%= logo %>',
     prefersColor: { default: 'auto' },
-    editLink: "https://github.com/youngjuning/<%= name %>.js.org/edit/main/{filename}",
+    editLink:
+      'https://github.com/youngjuning/<%= name %>.js.org/edit/main/{filename}',
     socialLinks: {
       github: 'https://github.com/youngjuning/<%= name %>',
-      twitter: 'https://twitter.com/luozhu2021'
+      twitter: 'https://twitter.com/luozhu2021',
     },
     hd: { rules: [] },
-    footer: 'Made with ❤️ by <a href="https://github.com/youngjuning" target="_blank">紫升</a>'
+    footer: `Made with ❤️ by <a href="https://github.com/youngjuning" target="_blank">紫升</a><br/><div style="width:180px;margin: 0 auto"><script async type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=kvgeYP8qIu8lbwRcPtpsgFsJddybCkmKoAYKFHF6JY8"></script></div><br/><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span></span> | <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span></span>`,
   },
   theme: {
     '@c-primary': '<%= theme %>',
   },
   publicPath: '/',
   // analytics: {
-    // ga_v2: '',
+  // ga_v2: '',
   // },
   // sitemap: {
-    // hostname: 'https://<%= name %>.js.org',
+  // hostname: 'https://<%= name %>.js.org',
   // },
   hash: true,
   exportStatic: {},
@@ -31,5 +32,14 @@ export default defineConfig({
   headScripts:
     process.env.NODE_ENV !== 'development'
       ? [{ src: '/adsbygoogle.js', async: true, crossorigin: 'anonymous' }]
+      : [],
+  scripts:
+    process.env.NODE_ENV === 'development'
+      ? [
+          {
+            async: true,
+            src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
+          },
+        ]
       : [],
 });
