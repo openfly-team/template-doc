@@ -7,13 +7,13 @@ export default defineConfig({
     name: '<%= title %>',
     logo: '<%= logo %>',
     prefersColor: { default: 'auto' },
-    editLink: "https://github.com/zizhuspot/<%= name %>.js.org/edit/main/{filename}",
+    editLink: "https://github.com/youngjuning/<%= name %>.js.org/edit/main/{filename}",
     socialLinks: {
-      github: 'https://github.com/zizhuspot/<%= name %>',
+      github: 'https://github.com/youngjuning/<%= name %>',
       twitter: 'https://twitter.com/luozhu2021'
     },
     hd: { rules: [] },
-    footer: 'Made with ❤️ by <a href="https://github.com/zizhuspot" target="_blank">紫竹光点计划</a>'
+    footer: 'Made with ❤️ by <a href="https://github.com/youngjuning" target="_blank">紫升</a>'
   },
   theme: {
     '@c-primary': '<%= theme %>',
@@ -28,7 +28,8 @@ export default defineConfig({
   hash: true,
   exportStatic: {},
   ...(process.env.NODE_ENV === 'development' ? {} : { ssr: {} }),
-  headScripts: [
-    {src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7029815294762181', async: true, crossorigin: 'anonymous'},
-  ]
+  headScripts:
+    process.env.NODE_ENV !== 'development'
+      ? [{ src: '/adsbygoogle.js', async: true, crossorigin: 'anonymous' }]
+      : [],
 });
