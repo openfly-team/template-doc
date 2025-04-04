@@ -13,6 +13,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "dumi": "2.4.18"
+    "dumi": "latest"
   }
 }
