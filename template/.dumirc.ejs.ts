@@ -8,7 +8,7 @@ export default defineConfig({
     logo: '<%= logo %>',
     prefersColor: { default: 'auto' },
     editLink:
-      'https://github.com/youngjuning/<%= name %>.js.org/edit/main/{filename}',
+      'https://github.com/youngjuning/<%= name %>/edit/main/{filename}',
     socialLinks: {
       github: 'https://github.com/youngjuning/<%= name %>',
       twitter: 'https://twitter.com/luozhu2021',
@@ -24,7 +24,7 @@ export default defineConfig({
   // ga_v2: '',
   // },
   // sitemap: {
-  // hostname: 'https://<%= name %>.js.org',
+  // hostname: 'https://<%= name %>.zisheng.pro',
   // },
   hash: true,
   ...(process.env.NODE_ENV === 'development' ? {} : { ssr: {} }),
