@@ -40,7 +40,6 @@ const Sidebar: FC = () => {
         style={{ display: "block" }}
         data-ad-client="ca-pub-5641491107630454"
         data-ad-slot="2431068660"
-        data-page-url="https://www.nablepart.com/<%= name %>"
         data-override-format="true"
         data-ad-format="auto"
         data-full-width-responsive="true"
