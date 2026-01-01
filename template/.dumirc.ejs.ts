@@ -8,9 +8,9 @@ export default defineConfig({
     logo: '<%= logo %>',
     prefersColor: { default: 'auto' },
     editLink:
-      'https://github.com/youngjuning/<%= name %>/edit/main/{filename}',
+      'https://github.com/youngjuning/<%= name %>.zisheng.pro/edit/main/{filename}',
     socialLinks: {
-      github: 'https://github.com/youngjuning/<%= name %>'
+      github: 'https://github.com/youngjuning/<%= name %>.zisheng.pro'
     },
     hd: { rules: [] },
     footer: `
