@@ -1,7 +1,7 @@
 ---
 title: <%= subtitle %>
 description: <%= description %>
-keywords: [紫竹光点计划]
+keywords: [<%= title %>]
 hero:
   title: <%= title %>
   description: <%= subtitle %>

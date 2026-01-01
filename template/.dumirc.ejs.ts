@@ -10,8 +10,7 @@ export default defineConfig({
     editLink:
       'https://github.com/youngjuning/<%= name %>/edit/main/{filename}',
     socialLinks: {
-      github: 'https://github.com/youngjuning/<%= name %>',
-      twitter: 'https://twitter.com/luozhu2021',
+      github: 'https://github.com/youngjuning/<%= name %>'
     },
     hd: { rules: [] },
     footer: `
@@ -34,14 +33,15 @@ export default defineConfig({
   exportStatic: {},
   ...(process.env.NODE_ENV === 'development' ? {} : { ssr: {} }),
   headScripts: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+    process.env.NODE_ENV !== 'development' ? {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5641491107630454',
       async: true,
       crossorigin: 'anonymous',
-    },
+    } : { src:"" },
     {
-      src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
+      src: '/busuanzi.pure.min.js',
       async: true,
+      crossorigin: 'anonymous',
     },
   ],
 });
